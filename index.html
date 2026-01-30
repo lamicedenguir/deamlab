@@ -836,6 +836,113 @@
     <link rel="stylesheet" href="css/sliderbanner.css">
     <!--Chatbot style-->
     <style>
+        /* Modernized Landing Page Styles - Absolute Vertical Stack */
+        #main section[role="main"] {
+            display: block !important;
+        }
+        #main .container, 
+        #main .page,
+        #main div[class*="container"] {
+            display: block !important;
+            width: 100% !important;
+            max-width: 1240px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            flex: none !important;
+        }
+        .deam-hero {
+            display: block !important;
+            padding: 40px 0 !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+        .deam-hero-content {
+            width: 100% !important;
+            margin-bottom: 30px !important;
+            display: block !important;
+            clear: both !important;
+        }
+        .deam-hero-image {
+            width: 100% !important;
+            display: block !important;
+            clear: both !important;
+        }
+        .deam-hero-image img {
+            border-radius: 8px;
+            box-shadow: var(--wp--preset--shadow--natural);
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .section-block {
+            display: block !important;
+            width: 100% !important;
+            padding: 60px 0 !important;
+            border-bottom: 1px solid var(--wp--preset--color--light-gray) !important;
+            clear: both !important;
+            float: none !important;
+        }
+        .section-block.alt-bg {
+            background-color: #f9f9f9 !important;
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        .news-box {
+            background: #fff;
+            border-left: 5px solid var(--wp--preset--color--charlotte-green);
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 0 8px 8px 0;
+        }
+        .news-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .podcast-card {
+            background: #fff;
+            border: 1px solid var(--wp--preset--color--niner-gold);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: var(--wp--preset--shadow--natural);
+        }
+        .deam-btn {
+            display: inline-block;
+            background-color: var(--wp--preset--color--charlotte-green);
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none !important;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .deam-btn:hover {
+            background-color: var(--wp--preset--color--niner-green-darkest);
+        }
+        .deam-btn.outline {
+            background-color: transparent;
+            color: var(--wp--preset--color--charlotte-green) !important;
+            border: 2px solid var(--wp--preset--color--charlotte-green);
+        }
+        .deam-btn.outline:hover {
+            background-color: var(--wp--preset--color--charlotte-green);
+            color: #fff !important;
+        }
+
         /* Simple styling for chatbot */
         #chatbot-container {
             position: fixed;
@@ -1304,35 +1411,29 @@
     <!-- Main Content -->
     <section id="main" role="main" tabindex="-1">
 
-        <div class="page">
-            <h2 align="center" class="has-metallic-gold-color"><b>NEWS</b></h2>
-
+        <div class="section-block">
             <div class="container">
-                    <p class="has-metallic-gold-color">
-                        <a href="news/index.html#10172025">
-                            UNC Charlotte’s Department of Mechanical Engineering & Engineering Science and MSC Industrial Supply Co. successfully hosted an inspiring Manufacturing Day event on October 17 at Duke Centennial Hall.
-                        </a>
-                    </p>
-                    <!-- /.listing-item-title -->
-
-                    <div class="page">
+                <h2 class="has-charlotte-green-color"><b>LATEST UPDATES</b></h2>
+                <div class="news-box">
+                    <div class="news-item">
+                        <p class="has-charlotte-green-color">
+                            <a href="news/index.html#10172025">
+                                UNC Charlotte’s Department of Mechanical Engineering & Engineering Science and MSC Industrial Supply Co. successfully hosted an inspiring Manufacturing Day event on October 17 at Duke Centennial Hall.
+                            </a>
+                        </p>
                     </div>
-                    <!-- /.listing-item-body -->
-            </div>
-            <div class="container">
-                <p class="has-metallic-gold-color">
-                    <a href="news/index.html#10162025">
-                        More than 60 leaders, innovators, and makers participated in the Innovation Exchange Seminar IEX 2025 about The Future of Smart Factories in the Carolinas on October 16 at UNC Charlotte.
-                    </a>
-                </p>
-                <!-- /.listing-item-title -->
-
-                <div class="page">
+                    <div class="news-item">
+                        <p class="has-charlotte-green-color">
+                            <a href="news/index.html#10162025">
+                                More than 60 leaders, innovators, and makers participated in the Innovation Exchange Seminar IEX 2025 about The Future of Smart Factories in the Carolinas on October 16 at UNC Charlotte.
+                            </a>
+                        </p>
+                    </div>
+                    <div style="text-align: right;">
+                        <a href="news/index.html" class="deam-btn outline">View All News</a>
+                    </div>
                 </div>
-                <!-- /.listing-item-body -->
-
             </div>
-            <!-- /.listing-item-content -->
         </div>
 
         <div class="slider-container">
@@ -1363,45 +1464,58 @@
         </div>
         <div class="container">
 
-            <div class="page">
-                <a name="DEAM"></a>
-                <h3 class="wp-block-heading has-text-align-center is-style-default has-metallic-gold-color has-text-color has-link-color has-big-header-font-size wp-elements-a39ea6c1cb9fd078bbf1f6999efbde06" style="font-style:normal;font-weight:400"><strong>DIGITAL ENGINEERING FOR ADVANCED MANUFACTURING "<i>DEAM LAB</i>"</strong></h3>
-
-                <p class="page-body">
-
-                <p>Discover the cutting-edge research and facilities of DEAM Lab. Our state-of-the-art facilities and talented researchers are at the forefront of digital engineering and advanced manufacturing. Whether you're a student, industry partner, or simply curious about the future of technology in manufacturing, we invite you to explore our work and join us on this exciting journey.</p>
-
-                <figure class="wp-block-image alignfull size-large"><img fetchpriority="high" decoding="async" width="1658" height="904" src="images/deamlab_activity.png" alt="" class="wp-image-399" srcset="images/deamlab_activity.png 1000w, images/deamlab_activity.png 600w, images/deamlab_activity.png 768w, images/deamlab_activity.png 1536w, images/deamlab_activity.png 1400w, images/deamlab_activity.png 300w, images/deamlab_activity.png 1772w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
-
-                <h2>What is Digital Engineering for Advanced Manufacturing?</h2>
-                <p>Digital Engineering for Advanced Manufacturing is about using digital tools and technologies to make manufacturing faster, smarter, and more efficient. Instead of just relying on physical machines, engineers use computer models, simulations, and data to design, test, and improve products and processes before they are built. This helps save time, reduce costs, and ensure better quality.
-
-                <p>For example, digital twins create virtual copies of real machines, allowing engineers to see how they work and fix problems before they happen. It’s like having a digital version of a factory where you can try things out without wasting materials or time.</p>
-                <h2>About DEAM lab</h2>
-                <p>DEAM Lab is a hub for groundbreaking research and industry collaboration. Our interdisciplinary team is committed to developing innovative solutions that address real-world challenges. Join us in exploring the latest advancements in digital engineering and advanced manufacturing.</p>
-
-                <p>DEAM Lab is founded in 2024 as part of William States Lee College of Engineering in the University of North Carolina at Charlotte.</p>
-                <p></p>
-                <h4 align="center">Know more by listening to DeepDive AI Podcast about DEAM Lab</h4>
-                <p align="center"><img src="images/podcast.gif" width="200" alt="DeepDive podcast by Google NotebookLM"></p>
-                <p align="center">
-                    <audio controls>
-                        <source src="images/deamlab.wav" type="audio/wav">
-                        Your browser does not support the audio element.
-                    </audio>
-                </p>
-                <p align="center"><a href="research-themes/index.html">Learn more about DEAM lab activities</a></p>
-                <p></p>
-                <h2>Our partners and sponsors</h2>
-                <!-- <p align="center"><a href="https://www.sw.siemens.com/en-US/"><img fetchpriority="high" decoding="async" width=auto height="300" src="images/siemens_digital.png" alt="" class="wp-image-399" srcset="images/siemens_digital.png 1000w, images/Magic_Leap.svg.png 600w, images/siemens_digital.png 768w, images/siemens_digital.png 1536w, images/siemens_digital.png 1400w, images/siemens_digital.png 300w, images/siemens_digital.png 1772w" sizes="(max-width: 1000px) 100vw, 1000px" /></a>
-            <a href="https://www.magicleap.com"><img fetchpriority="high" decoding="async" width=auto height="300" src="images/Magic_Leap.png" alt="" class="wp-image-399" srcset="images/Magic_Leap.png 1000w, images/Magic_Leap.svg.png 600w, images/Magic_Leap.png 768w, images/Magic_Leap.png 1536w, images/Magic_Leap.png 1400w, images/Magic_Leap.png 300w, images/Magic_Leap.png 1772w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p> -->
-                <p align="center"><a href="industrial-partners/index.html">Learn more about DEAM lab partners</a></p>
-
-                <p align="center">Are you interested in our lab?</p>
-                <p align="center"><a href="contact-us/index.html">Contact us</a></p>
-
+            <div class="section-block">
+                <div class="deam-hero">
+                    <div class="deam-hero-content">
+                        <a name="DEAM"></a>
+                        <h1 class="wp-block-heading has-charlotte-green-color has-big-header-font-size"><strong>DIGITAL ENGINEERING FOR ADVANCED MANUFACTURING "<i>DEAM LAB</i>"</strong></h1>
+                        <p class="page-body">Discover the cutting-edge research and facilities of DEAM Lab. Our state-of-the-art facilities and talented researchers are at the forefront of digital engineering and advanced manufacturing. Whether you're a student, industry partner, or simply curious about the future of technology in manufacturing, we invite you to explore our work and join us on this exciting journey.</p>
+                        <a href="contact-us/index.html" class="deam-btn">Contact us</a>
+                    </div>
+                    <div class="deam-hero-image">
+                        <img src="images/deamlab_activity.png" alt="DEAM Lab Activity">
+                    </div>
+                </div>
             </div>
-            <!-- /.page-body -->
+
+            <div class="section-block alt-bg">
+                <div class="container">
+                    <h2 class="has-charlotte-green-color">What is Digital Engineering for Advanced Manufacturing?</h2>
+                    <p>Digital Engineering for Advanced Manufacturing is about using digital tools and technologies to make manufacturing faster, smarter, and more efficient. Instead of just relying on physical machines, engineers use computer models, simulations, and data to design, test, and improve products and processes before they are built. This helps save time, reduce costs, and ensure better quality.</p>
+                    <p>For example, digital twins create virtual copies of real machines, allowing engineers to see how they work and fix problems before they happen. It’s like having a digital version of a factory where you can try things out without wasting materials or time.</p>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2 class="has-charlotte-green-color">About DEAM lab</h2>
+                <p>DEAM Lab is a hub for groundbreaking research and industry collaboration. Our interdisciplinary team is committed to developing innovative solutions that address real-world challenges. Join us in exploring the latest advancements in digital engineering and advanced manufacturing.</p>
+                <p>DEAM Lab is founded in 2024 as part of William States Lee College of Engineering in the University of North Carolina at Charlotte.</p>
+            </div>
+
+            <div class="section-block alt-bg">
+                <div class="container">
+                    <div class="podcast-card">
+                        <h3 class="has-charlotte-green-color" style="margin-top:0">Listen to DeepDive AI Podcast about DEAM Lab</h3>
+                        <p><img src="images/podcast.gif" width="180" alt="DeepDive podcast by Google NotebookLM" style="border-radius:50%"></p>
+                        <p>
+                            <audio controls style="width:100%; max-width:400px">
+                                <source src="images/deamlab.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </p>
+                        <a href="research-themes/index.html" class="deam-btn outline">Learn more about DEAM lab activities</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block" style="text-align:center">
+                <h2 class="has-charlotte-green-color">Our partners and sponsors</h2>
+                <p>Are you interested in our lab?</p>
+                <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap">
+                    <a href="industrial-partners/index.html" class="deam-btn outline">Learn more about DEAM lab partners</a>
+                    <a href="contact-us/index.html" class="deam-btn">Contact us</a>
+                </div>
+            </div>
 
         </div>
         <!-- /.page -->
