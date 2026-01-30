@@ -1294,6 +1294,135 @@
     </header>
     <!-- /.clt-header -->
     <!-- Main Content -->
+    <style>
+        .leadership-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 40px 0;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            border-left: 5px solid var(--wp--preset--color--charlotte-green);
+        }
+
+        .leadership-photo {
+            flex: 0 0 280px;
+        }
+
+        .leadership-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .leadership-content {
+            flex: 1;
+        }
+
+        .leadership-name {
+            margin: 0 0 5px 0 !important;
+            font-size: 2.2rem !important;
+            color: var(--wp--preset--color--charlotte-green) !important;
+            text-align: left !important;
+        }
+
+        .leadership-title {
+            margin: 0 0 15px 0 !important;
+            font-size: 1.4rem !important;
+            color: var(--wp--preset--color--stone-gray) !important;
+            text-transform: none !important;
+            text-align: left !important;
+        }
+
+        .leadership-role {
+            display: inline-block;
+            background: var(--wp--preset--color--niner-gold);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .leadership-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+            color: var(--wp--preset--color--black);
+        }
+
+        .contact-item i {
+            color: var(--wp--preset--color--charlotte-green);
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: var(--wp--preset--color--charlotte-green);
+            text-decoration: underline;
+        }
+
+        .leadership-bio h4 {
+            color: var(--wp--preset--color--charlotte-green);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .leadership-bio p {
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        @media (max-width: 850px) {
+            .leadership-card {
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                text-align: center;
+            }
+
+            .leadership-photo {
+                flex: 0 0 auto;
+                width: 240px;
+                margin-bottom: 20px;
+            }
+
+            .leadership-name,
+            .leadership-title {
+                text-align: center !important;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .leadership-bio {
+                text-align: left;
+            }
+        }
+    </style>
     <section id="main" role="main" tabindex="-1">
 
         <aside class="widgetarea-below-header" aria-label="Below Header Area">
@@ -1307,85 +1436,47 @@
         </aside>
 
         <div class="container">
-
-
             <div class="page">
-
-
-
                 <h1 class="page-title hidden">Team</h1>
 
                 <div class="page-body">
+                    <div class="leadership-card">
+                        <div class="leadership-photo">
+                            <img decoding="async" src="images/Jose-C-M-Outeiro.jpg" alt="José C. M. Outeiro" class="wp-image-617" />
+                        </div>
+                        <div class="leadership-content">
+                            <h2 class="leadership-name"><strong><a href="https://mees.charlotte.edu/directory/jose-cm-outeiro/">José C. M. Outeiro, Ph.D.</a></strong></h2>
+                            <h3 class="leadership-title">Full Professor</h3>
+                            <div class="leadership-role">DEAM LAB DIRECTOR</div>
 
+                            <div class="leadership-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <a href="tel:7046877213">704-687-7213</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope-open"></i>
+                                    <a href="mailto:jc.outeiro@charlotte.edu">jc.outeiro@charlotte.edu</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Duke 164</span>
+                                </div>
+                            </div>
 
-                    <h2 class="wp-block-heading has-text-align-center is-style-default has-charlotte-green-color has-text-color has-link-color has-big-header-font-size wp-elements-970f58d43bd219728e15c3d5e03b5549" style="font-style:normal;font-weight:400;text-transform:capitalize"><strong><a href="https://mees.charlotte.edu/directory/jose-cm-outeiro/">José C. M. Outeiro, Ph.D.</a></strong><br>Full Professor</h2>
-
-
-
-                    <h3 class="wp-block-heading has-text-align-center is-style-default has-metallic-gold-color has-text-color has-link-color has-big-header-font-size wp-elements-a39ea6c1cb9fd078bbf1f6999efbde06" style="font-style:normal;font-weight:400"><strong>DEAM LAB DIRECTOR</strong></h3>
-                    <div class="listing-item-info">
-
-                        <div class="listing-item-info-item phone">
-                            <i class="fas fa-mobile-alt"></i> <a href="tel:7046877213">704-687-7213</a>
-                        </div><!-- /.phone -->
-
-                        <div class="listing-item-info-item email">
-                            <i class="fas fa-envelope-open"></i> <a href="mailto:jc.outeiro@charlotte.edu">jc.outeiro@charlotte.edu</a>
-                        </div><!-- /.email -->
-
-                        <div class="listing-item-info-item office">
-                            <i class="fas fa-map-marker-alt"></i> Duke 164
-                        </div><!-- /.office -->
-
-                    </div><!-- /.listing-item-info -->
-
-
-                    <p></p>
-
-
-                    <div class="wp-block-image">
-                        <figure class="aligncenter size-full is-resized"><img decoding="async" width="690" height="902" data-src="images/Jose-C-M-Outeiro.jpg" alt="" class="wp-image-617 lazyload" style="--smush-placeholder-width: 690px; --smush-placeholder-aspect-ratio: 690/902;width:300px;height:auto" data-srcset="images/Jose-C-M-Outeiro.jpg 690w, images/Jose-C-M-Outeiro.jpg 600w, images/Jose-C-M-Outeiro.jpg 300w" data-sizes="(max-width: 690px) 100vw, 690px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="690" height="902" src="images/Jose-C-M-Outeiro.jpg" alt="" class="wp-image-617" style="width:300px;height:auto" srcset="images/Jose-C-M-Outeiro.jpg 690w, images/Jose-C-M-Outeiro.jpg 600w, images/Jose-C-M-Outeiro.jpg 300w" sizes="(max-width: 690px) 100vw, 690px" /></noscript></figure>
+                            <div class="leadership-bio">
+                                <h4>Biography</h4>
+                                <p>Professor José C. M. Outeiro is a researcher and educator with a distinguished career in Mechanical Engineering, particularly in the field of Advanced Manufacturing. He holds a full professorship position at the University of North Carolina at Charlotte.</p>
+                                <p>Throughout his career, he has held positions at various institutions across Europe and the United States. These include appointments at the Arts et Metiers Institute of Technology in France, Karlsruhe Institute of Technology in Germany, the University of Kentucky in the U.S.A., and the Catholic University of Portugal. He was awarded Fellow of the esteemed International Academy of Production Engineering (CIRP).</p>
+                                <p>Dr. Outeiro has expertise of over 25 years in machining and hybrid processes, especially focused on the quality of the product concerning the surface integrity, part distortion and the functional performance and lifespan of components. He has developed a strong expertise on process modeling using multiphysics/multiscale approaches and Machine Learning to be integrated in Digital Twins (DTs).</p>
+                                <p>Professor Outeiro actively contributes to the scientific community by serving on editorial boards of renowned journals and scientific committees of conferences. He has also mentored numerous Ph.D., Master's, and undergraduate students. His achievements have been recognized with several awards and distinctions.</p>
+                            </div>
+                        </div>
                     </div>
 
-
-                    <p></p>
-
-
-
-                    <p><strong>Bio:</strong></p>
-
-
-
-                    <p>Professor José C. M. Outeiro is researcher and educator with a career in Mechanical Engineering, particularly in the field of Advanced Manufacturing. He holds a full professorship position at the University of North Carolina at Charlotte.</p>
-
-                    <p>Throughout his career, he has held positions at various institutions across Europe and the United States. These include appointments at the Arts et Metiers Institute of Technology in France, Karlsruhe Institute of Technology in Germany, the University of Kentucky in the U.S.A., and the Catholic University of Portugal. He was awarded Fellow of the esteemed International Academy of Production Engineering (CIRP).</p>
-
-                    <p>Dr. Outeiro has expertise of over 25 years in machining and hybrid processes, especially focused on the quality of the product concerning the surface integrity, part distortion and the functional performance and lifespan of components. He has developed a strong expertise on process modeling using multiphysics/multiscale approaches and Machine Learning to be integrated in Digital Twins (DTs).</p>
-
-                    <p>Professor Outeiro's actively contributes to the scientific community by serving on editorial boards of renowned journals and scientific committees of conferences. He has also mentored numerous Ph.D., Master's, and undergraduate students. His achievements have been recognized with several awards and distinctions.</p>
-
-                    <p></p>
-
-
-                    <div class="wp-block-getwid-advanced-spacer" style="height:50px" aria-hidden="true"></div>
-
-
-
-
-
-                    <p></p>
-
-
-
+                    <div class="wp-block-getwid-advanced-spacer" style="height:20px" aria-hidden="true"></div>
                 </div><!-- /.page-body -->
-
-
-
-
-
             </div><!-- /.page -->
-
-
         </div><!-- /.container -->
 
     </section>

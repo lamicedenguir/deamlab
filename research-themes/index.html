@@ -1294,206 +1294,339 @@
     <!-- /.clt-header -->
     <!-- Main Content -->
     <section id="main" role="main" tabindex="-1">
+        <style>
+            .theme-section {
+                padding: 60px 0;
+                border-bottom: 1px solid #e6e8e9;
+            }
+            .theme-section:last-of-type {
+                border-bottom: none;
+            }
+            .theme-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                gap: 40px;
+                align-items: start;
+            }
+            @media (max-width: 900px) {
+                .theme-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .topics-card {
+                background: #f8f9fa;
+                padding: 25px;
+                border-radius: 8px;
+                border-left: 5px solid #005035;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            }
+            .topics-list {
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 15px 0 0 0 !important;
+            }
+            .topics-list li {
+                margin-bottom: 10px !important;
+                font-weight: 600;
+                color: #007377;
+                display: flex;
+                align-items: center;
+            }
+            .topics-list li::before {
+                content: "•";
+                color: #005035;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+                display: none; /* Hide if using custom icons or bullet spacing */
+            }
+            .theme-title {
+                font-size: 3.2rem !important;
+                color: #005035;
+                margin-bottom: 25px !important;
+                text-align: left !important;
+                border-bottom: 2px solid #a49665;
+                display: inline-block;
+                padding-bottom: 5px;
+            }
+            .video-container {
+                position: relative;
+                width: 100%;
+                margin: 25px 0;
+                /* Simplified to prevent rendering glitches */
+                display: flex;
+                justify-content: center;
+            }
+            .video-ratio-16-9 video,
+            .video-ratio-16-9 iframe {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                background: transparent;
+            }
+            .video-ratio-1-1 video {
+                aspect-ratio: 1 / 1;
+                width: 100%;
+                height: auto;
+                max-width: 500px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                background: transparent;
+            }
+            .video-container video {
+                display: block;
+            }
+            .video-caption {
+                font-size: 1.4rem;
+                font-style: italic;
+                color: #666;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .reference-list {
+                font-size: 1.3rem;
+                color: #555;
+                margin-top: 30px;
+                border-top: 1px dashed #ccc;
+                padding-top: 15px;
+            }
+            .reference-list p {
+                margin-bottom: 8px !important;
+                line-height: 1.4;
+            }
+            .content-p {
+                line-height: 1.7;
+                margin-bottom: 20px !important;
+                text-align: justify;
+            }
+            .intro-text {
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+                color: #333;
+            }
+            /* Collapsible Styles */
+            details.theme-section {
+                border-bottom: 1px solid #e6e8e9;
+                padding: 0;
+            }
+            details.theme-section summary {
+                padding: 25px 0;
+                cursor: pointer;
+                list-style: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                transition: background 0.3s;
+            }
+            details.theme-section summary::-webkit-details-marker {
+                display: none;
+            }
+            details.theme-section summary:hover .theme-title {
+                color: #A49665;
+            }
+            details.theme-section summary::before {
+                content: "+";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 26px;
+                text-align: center;
+                border: 2px solid #005035;
+                color: #005035;
+                border-radius: 50%;
+                margin-right: 15px;
+                font-weight: bold;
+                font-size: 20px;
+                flex-shrink: 0;
+                transition: all 0.3s;
+            }
+            details[open].theme-section summary::before {
+                content: "−";
+                background: #005035;
+                color: #fff;
+                transform: rotate(180deg);
+            }
+            .theme-content-wrapper {
+                padding-bottom: 60px;
+            }
+        </style>
 
         <aside class="widgetarea-below-header" aria-label="Below Header Area">
             <div class="container">
                 <div class="widget widget">
                     <figure class="wp-block-image alignfull size-large">
-                        <img fetchpriority="high" decoding="async" width="1000" height="255" src="../images/DEAMLABbanner.jpg" alt="" class="wp-image-399" srcset="../images/DEAMLABbanner.jpg 1000w, ../images/DEAMLABbanner.jpg 600w, ../images/DEAMLABbanner.jpg 768w, ../images/DEAMLABbanner.jpg 1536w, ../images/DEAMLABbanner.jpg 1400w, ../images/DEAMLABbanner.jpg 300w, ../images/DEAMLABbanner.jpg 1772w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                        <img fetchpriority="high" decoding="async" width="1000" height="255" src="../images/DEAMLABbanner.jpg" alt="DEAM Lab Banner" class="wp-image-399" />
                     </figure>
                 </div>
             </div>
         </aside>
 
         <div class="container">
-
-
             <div class="page">
-
-
-
                 <h1 class="page-title">Research Themes</h1>
 
                 <div class="page-body">
+                    <p class="intro-text">The research activities are on Advanced Manufacturing, in particular on Digital and Sustainable Manufacturing. DEAM LAB's main research themes are presented below.</p>
 
-                    <p>The research activities are on Advanced Manufacturing, in particular on Digital and Sustainable Manufacturing.</p>
-                    <p>DEAM LAB's main research themes are presented below.</p>
+                    <!-- Theme 1: Digital Twins -->
+                    <details class="theme-section">
+                        <summary>
+                            <h2 class="theme-title" style="margin-bottom:0 !important; border-bottom:none !important;">Digital Twins</h2>
+                        </summary>
+                        <div class="theme-content-wrapper">
+                            <div class="theme-grid">
+                                <div class="theme-sidebar">
+                                    <div class="topics-card">
+                                        <strong>This theme includes the following topics:</strong>
+                                        <ul class="topics-list">
+                                            <li>Industrial Internet of Things (IIoT)</li>
+                                            <li>Big data</li>
+                                            <li>Artificial Intelligence & Machine Learning</li>
+                                            <li>Physics-Based Modeling</li>
+                                            <li>Cloud Computing</li>
+                                        </ul>
+                                    </div>
+                                    <figure class="wp-block-image size-large" style="margin-top:30px;">
+                                        <img decoding="async" width="1000" height="1000" src="images/DTintro.gif" alt="Digital Twin Intro" class="wp-image-513" style="border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                                    </figure>
+                                </div>
 
-                    <div class="wp-block-getwid-advanced-spacer" style="height:60px" aria-hidden="true"></div>
-                    <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
-                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:41%">
+                                <div class="theme-main">
+                                    <p class="content-p"><strong>Digital Twin (DT)</strong> is the creation of a digital representation of a real-world physical asset (system, process, or product), to enable management, simulation and optimization. They integrate real-time data from sensors (IoT), Artificial Intelligence (AI), physics-based modeling and control systems to adapt to changing conditions such as, product defects, machine breakdowns or supply chain disruptions.</p>
+                                    <p class="content-p">DEAM Lab is working on five key topics related to the development and deployment of DTs in manufacturing, described as follows.</p>
+                                    
+                                    <p class="content-p"><b>1. Manufacturing Processes and Systems Simulation and Optimization.</b> DTs are used for simulating and optimizing manufacturing processes and systems for improving product quality, productivity and efficient use of resources.</p>
+                                    
+                                    <div class="video-container video-ratio-16-9">
+                                        <iframe src="https://www.youtube.com/embed/t6ppwWZUSEc?si=2VocnYOsVlNmB0U9" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">Example of a Digital Twin of Industrial Automation (Source: <a href="https://youtu.be/t6ppwWZUSEc" target="_blank">YouTube</a>)</p>
 
-                            <p><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-black-color"><strong>This theme includes the following topics:</strong></mark></p>
-
-                            <ul class="wp-block-list">
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Industrial Internet of Things (IIoT)</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Big data</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Artificial Intelligence & Machine Learning</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Physics-Based Modeling</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Cloud Computing</strong></mark></strong></li>
-                            </ul>
-
-                            <figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-src="images/DTintro.gif" alt="" class="wp-image-513 lazyload" data-srcset="images/DTintro.gif 1000w, images/DTintro.gif 600w, images/DTintro.gif 150w, images/DTintro.gif 768w, images/DTintro.gif 300w, images/DTintro.gif 1024w" data-sizes="(max-width: 1000px) 100vw, 1000px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1000px; --smush-placeholder-aspect-ratio: 1000/1000;" /><noscript><img decoding="async" width="1000" height="1000" src="images/DTintro.gif" alt="" class="wp-image-513" srcset="images/DTintro.gif 1000w, images/DTintro.gif 600w, images/DTintro.gif 150w, images/DTintro.gif 768w, images/DTintro.gif 300w, images/DTintro.gif 1024w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript></figure>
-                        </div>
-
-                        <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:59%">
-                            <p class="has-text-align-center has-large-font-size"><strong>Digital Twins</strong></p>
-
-                            <p align="justify"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Digital Twin (DT)</mark></strong> is the creation of a digital representation of a real-world physical asset (system, process, or product), to enable management, simulation and optimization. They integrate real-time data from sensors (IoT), Artificial Intelligence (AI), physics-based modeling and control systems to adapt to changing conditions such as, product defects, machine breakdowns or supply chain disruptions.</p>
-                            <p align="justify">
-                                DEAM Lab is working on five key topics related to the development and deployment of DTs in manufacturing, described as follows.
-                            </p>
-                            <p align="justify">
-                                <b>1. Manufacturing Processes and Systems Simulation and Optimization.</b> DTs are used for simulating and optimizing manufacturing processes and systems for improving product quality, productivity and efficient use of resources.
-                            </p>
-
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/t6ppwWZUSEc?si=2VocnYOsVlNmB0U9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <p align="center" style="font-size:16px">
-                                <i>Example of a Digital Twin of Industrial Automation (Source: <a href="https://youtu.be/t6ppwWZUSEc">YouTube</a>)</i>
-                            </p>
-                            <p align="justify"><b>2. Components Repair.</b> DTs are revolutionizing repair practices in industries such as aerospace, energy, and defense. By creating digital replicas of components and systems, DTs allow the automatic repair of components by integrating defect detection, generation of CAD models of defective parts, creation of toolpaths for hybrid processes (i.e. metal deposition by Additive Manufacturing (AM) and finishing by machining), conducting hybrid processes and final inspection. This approach is essential for streamlining the repair process, thereby improving the overall efficiency of the repair system.</p>
-                            <p align="justify"><b>3. Process monitoring and maintenance.</b> DTs in manufacturing integrate data from sensors implemented in the processes (such as AM or machining) and AI to monitor performance in real-time. These DTs allow real-time quality control by fast detection of defects or deviations during production and establishes proactive maintenance schedules to identify potential failures before they occur, thus reducing downtime.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="wp-block-getwid-advanced-spacer" style="height:75px" aria-hidden="true"></div>
-                    <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex">
-                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:41%">
-
-                            <p><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-black-color"><strong>This theme includes the following topics:</strong></mark></p>
-
-                            <ul class="wp-block-list">
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Material Constitutive Modeling</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Finite Element Simulation</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Analytic-Based Modeling</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Physics-Guided Machine Learning</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Hybrid Modeling</strong></mark></strong></li>
-                            </ul>
-
-                            <figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-src="images/simulation.png" alt="" class="wp-image-525 lazyload" data-srcset="images/simulation.png 1000w, images/simulation.png 600w, images/simulation.png 150w, images/simulation.png 768w, images/simulation.png 300w, images/simulation.png 1024w" data-sizes="(max-width: 1000px) 100vw, 1000px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1000px; --smush-placeholder-aspect-ratio: 1000/1000;" /><noscript><img decoding="async" width="1000" height="1000" src="images/simulation.png" alt="" class="wp-image-525" srcset="images/simulation.png 1000w, images/simulation.png 600w, images/simulation.png 150w, images/simulation.png 768w, images/simulation.png 300w, images/simulation.png 1024w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript></figure>
-                        </div>
-
-                        <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:59%">
-                            <p class="has-text-align-center has-large-font-size"><strong>Multi-physics/multi-scale modeling, simulation, and optimization of manufacturing processes</strong></p>
-
-                            <p align="justify">The importance of multi-physics and multi-scale modeling, simulation, and optimization of manufacturing processes has grown significantly. These approaches deepen the understanding of physical phenomena and enable more accurate predictions of process performance and part quality.</p>
-
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/y5rGoNOV3gA?si=5qB47WlocOfdhuJ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
-                                <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%">
+                                    <p class="content-p"><b>2. Components Repair.</b> DTs are revolutionizing repair practices in industries such as aerospace, energy, and defense. By creating digital replicas of components and systems, DTs allow the automatic repair of components by integrating defect detection, generation of CAD models of defective parts, creation of toolpaths for hybrid processes (i.e. metal deposition by Additive Manufacturing (AM) and finishing by machining), conducting hybrid processes and final inspection. This approach is essential for streamlining the repair process, thereby improving the overall efficiency of the repair system.</p>
+                                    <p class="content-p"><b>3. Process monitoring and maintenance.</b> DTs in manufacturing integrate data from sensors implemented in the processes (such as AM or machining) and AI to monitor performance in real-time. These DTs allow real-time quality control by fast detection of defects or deviations during production and establishes proactive maintenance schedules to identify potential failures before they occur, thus reducing downtime.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
+                    <!-- Theme 2: Multi-physics modeling -->
+                    <details class="theme-section">
+                        <summary>
+                            <h2 class="theme-title" style="margin-bottom:0 !important; border-bottom:none !important;">Multi-physics/multi-scale modeling, simulation, and optimization of manufacturing processes</h2>
+                        </summary>
+                        <div class="theme-content-wrapper">
+                            <div class="theme-grid">
+                                <div class="theme-sidebar">
+                                    <div class="topics-card">
+                                        <strong>This theme includes the following topics:</strong>
+                                        <ul class="topics-list">
+                                            <li>Material Constitutive Modeling</li>
+                                            <li>Finite Element Simulation</li>
+                                            <li>Analytic-Based Modeling</li>
+                                            <li>Physics-Guided Machine Learning</li>
+                                            <li>Hybrid Modeling</li>
+                                        </ul>
+                                    </div>
+                                    <figure class="wp-block-image size-large" style="margin-top:30px;">
+                                        <img decoding="async" width="1000" height="1000" src="images/simulation.png" alt="Simulation modeling" class="wp-image-525" style="border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                                    </figure>
+                                </div>
 
-                    <div class="wp-block-getwid-advanced-spacer" style="height:60px" aria-hidden="true"></div>
-                    <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
-                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:41%">
+                                <div class="theme-main">
+                                    <p class="content-p">The importance of multi-physics and multi-scale modeling, simulation, and optimization of manufacturing processes has grown significantly. These approaches deepen the understanding of physical phenomena and enable more accurate predictions of process performance and part quality.</p>
 
-                            <p><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-black-color"><strong>This theme includes the following topics:</strong></mark></p>
-
-                            <ul class="wp-block-list">
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Workforce Development</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Workforce Guidance</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>VR/MR in Education</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Product Design</strong></mark></strong></li>
-                                <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color"><strong>Layout Planning</strong></mark></strong></li>
-                            </ul>
-
-                            <figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-src="images/immersive-technologies.png" alt="" class="wp-image-513 lazyload" data-srcset="images/immersive-technologies.png 1000w, images/immersive-technologies.png 600w, images/immersive-technologies.png 150w, images/immersive-technologies.png 768w, images/immersive-technologies.png 300w, images/immersive-technologies.png 1024w" data-sizes="(max-width: 1000px) 100vw, 1000px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1000px; --smush-placeholder-aspect-ratio: 1000/1000;" /><noscript><img decoding="async" width="1000" height="1000" src="images/immersive-technologies.png" alt="" class="wp-image-513" srcset="images/immersive-technologies.png 1000w, images/immersive-technologies.png 600w, images/immersive-technologies.png 150w, images/immersive-technologies.png 768w, images/immersive-technologies.png 300w, images/immersive-technologies.png 1024w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript></figure>
+                                    <div class="video-container video-ratio-16-9">
+                                        <iframe src="https://www.youtube.com/embed/y5rGoNOV3gA?si=5qB47WlocOfdhuJ1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </details>
 
-                        <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:59%">
-                            <p class="has-text-align-center has-large-font-size"><strong>Immersive Technologies in Manufacturing</strong></p>
+                    <!-- Theme 3: Immersive Technologies -->
+                    <details class="theme-section">
+                        <summary>
+                            <h2 class="theme-title" style="margin-bottom:0 !important; border-bottom:none !important;">Immersive Technologies in Manufacturing</h2>
+                        </summary>
+                        <div class="theme-content-wrapper">
+                            <div class="theme-grid">
+                                <div class="theme-sidebar">
+                                    <div class="topics-card">
+                                        <strong>This theme includes the following topics:</strong>
+                                        <ul class="topics-list">
+                                            <li>Workforce Development</li>
+                                            <li>Workforce Guidance</li>
+                                            <li>VR/MR in Education</li>
+                                            <li>Product Design</li>
+                                            <li>Layout Planning</li>
+                                        </ul>
+                                    </div>
+                                    <figure class="wp-block-image size-large" style="margin-top:30px;">
+                                        <img decoding="async" width="1000" height="1000" src="images/immersive-technologies.png" alt="Immersive technologies" class="wp-image-513" style="border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                                    </figure>
+                                </div>
 
-                            <p align="justify"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Immersive technologies</mark></strong> is an integration of virtual content with the physical environment in a way that allows the user to engage naturally with the blended reality.</p>
-                            <p align="justify"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">eXtended Reality (XR)</mark></strong> is an umbrella term used to describe all the immersive technologies that can merge the physical and virtual world. XR encompasses:</p>
-                            <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Augmented Reality (AR)</mark></strong></li>
-                            <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Virtual Reality (VR)</mark></strong></li>
-                            <li><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Mixed Reality (MR)</mark></strong></li>
+                                <div class="theme-main">
+                                    <p class="content-p"><strong>Immersive technologies</strong> is an integration of virtual content with the physical environment in a way that allows the user to engage naturally with the blended reality.</p>
+                                    <p class="content-p"><strong>eXtended Reality (XR)</strong> is an umbrella term used to describe all the immersive technologies that can merge the physical and virtual world. XR encompasses: <b>Augmented Reality (AR)</b>, <b>Virtual Reality (VR)</b>, and <b>Mixed Reality (MR)</b>.</p>
 
-                            <p align="justify">The integration of Digital Twins (DTs) and eXtended Reality (XR) technologies enables the creation of <strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-sky-blue-color">Immersive Digital Twins (IDTs)</mark></strong>. IDTs are interactive digital replicas of manufacturing processes and systems, used for simulation within XR environments, offering users a more safe, immersive, engaging, and realistic training experience. At the DEAM Lab, these IDTs are being developed to support remote teleoperation of manufacturing processes and systems, and enhance workforce training in manufacturing.</p>
+                                    <p class="content-p">The integration of Digital Twins (DTs) and eXtended Reality (XR) technologies enables the creation of <strong>Immersive Digital Twins (IDTs)</strong>. IDTs are interactive digital replicas of manufacturing processes and systems, used for simulation within XR environments, offering users a more safe, immersive, engaging, and realistic training experience. At the DEAM Lab, these IDTs are being developed to support remote teleoperation of manufacturing processes and systems, and enhance workforce training in manufacturing.</p>
 
-                            <p align="justify"><b>1. Remote teleoperation of manufacturing processes and systems using Immersive Digital Twins (IDTs).</b> IDTs are particularly well-suited for the remote teleoperation of manufacturing processes and systems in hazardous environments, such as nuclear and chemical facilities. Videos below demonstrate examples of IDTs used for the remote teleoperation of a CNC milling machine and a intelligent Robotic-Assisted Finisher System (iRAFS), offering an immersive experience with real-time video and audio streaming, as well as bidirectional communication between the physical machine and its digital counterpart. This project is developed in collaboration with Centria University of Applied Sciences in Finland.</p>
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="786" height="315" src="images/IDT_HAAS-CNC1.mp4" title="Example of DT for training" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <p class="content-p"><b>1. Remote teleoperation of manufacturing processes and systems using Immersive Digital Twins (IDTs).</b> IDTs are particularly well-suited for the remote teleoperation of manufacturing processes and systems in hazardous environments, such as nuclear and chemical facilities. Videos below demonstrate examples of IDTs used for the remote teleoperation of a CNC milling machine and a intelligent Robotic-Assisted Finisher System (iRAFS), offering an immersive experience with real-time video and audio streaming, as well as bidirectional communication between the physical machine and its digital counterpart.</p>
+                                    
+                                <div class="video-container video-ratio-16-9">
+                                   <video controls preload="auto" playsinline webkit-playsinline>
+                                        <source src="images/IDT_HAAS-CNC1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                    <p class="video-caption">IDT for remote teleoperation of CNC Machines<sup>1</sup></p>
+
+                                    <div class="video-container video-ratio-16-9">
+                                        <iframe src="https://www.youtube.com/embed/4jsFepGINP0?si=7XBGaAkmb0_9oWH6" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">IDT for remote teleoperation of an Intelligent Robot-Assisted Finisher System (iRAFS)<sup>2</sup></p>
+
+                                    <p class="content-p"><b>2. Workforce development using IDTs.</b> IDTs can also provide personalized, on-demand, safe, immersive, engaging, and autonomous training. IDTs allows real-time, contextual guidance tailored to specific tasks and environments; continuous learning and adaptation; multimodal interaction through voice and visual communication; and immersive simulations for skill practice in safe, controlled settings. Below you can find some examples of IDTs for education and workforce training in manufacturing.</p>
+
+                                <div class="video-container video-ratio-1-1">
+                                    <video controls preload="auto" playsinline webkit-playsinline>
+                                        <source src="images/IDT_3DPRINTING.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                    <p class="video-caption">Example of a IDT for education and workforce training in Additive Manufacturing of ceramics<sup>3</sup></p>
+
+                                <div class="video-container video-ratio-1-1">
+                                    <video controls preload="auto" playsinline webkit-playsinline>
+                                        <source src="images/IDT_HAAS-CNC2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                    <p class="video-caption">Example of a IDT for education and workforce training in CNC Machining<sup>4</sup></p>
+
+                                <div class="video-container video-ratio-1-1">
+                                    <video controls preload="auto" playsinline webkit-playsinline>
+                                        <source src="images/IDT_GD&T.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                    <p class="video-caption">Example of a IDT for education and workforce training in GD&T<sup>5</sup>.</p>
+
+                                    <div class="reference-list">
+                                        <p>1. <i>T. KAARLELA, J.C. OUTEIRO, <b>A Cyber-Physical Machine Tool Concept for Education and Workforce Training in CNC Machining</b>, 53rd SME North American Manufacturing Research Conference (NAMRC 53), Clemson University. Greenville, SC, USA, June 23 - 27, 2025. Manufacturing Letters (accepted).</i></p>
+                                        <p>2. <i>J.C. OUTEIRO, T. KAARLELA, N. UÇAK, N. GREIS, H. CHERUKURI, <b>Development of a Digital Twin of an Intelligent Robot-Assisted Finishing System for Polishing Metal Additive Manufactured Components</b>, 8th International Conference on Integrity, Reliability and Failure of Engineering Systems and Materials (IRF2025), Porto, Portugal, 15-18 July, 2025.</i></p>
+                                        <p>3. <i>Project Title: <b>Immersive Training for Additive Manufacturing of Technical Ceramics using Mixed Reality</b>. Funding: CAMAC. Period: 2024.</i></p>
+                                        <p>4. <i>T. KAARLELA, J.C. OUTEIRO, A Cyber-Physical Machine Tool Concept for Education and Workforce Training in CNC Machining, 53rd SME North American Manufacturing Research Conference (NAMRC 53), Clemson University. Greenville, SC, USA, June 23 - 27, 2025. Manufacturing Letters</i></p>
+                                        <p>5. <i>Project Title: <b>Workforce Training for Metrology using Immersive Technologies</b>. Funding: CPM Affiliates. Period: 2023-2024.</i></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p align="center" style="font-size:16px">
-                                <i>IDT for remote teleoperation of CNC Machines<sup>1</sup></i>
-                            </p>
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/4jsFepGINP0?si=7XBGaAkmb0_9oWH6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-
-                            <p align="center" style="font-size:16px">
-                                <i>IDT for remote teleoperation of an Intelligent Robot-Assisted Finisher System (iRAFS)<sup>2</sup></i>
-                            </p>
-                            <p style="font-size:14px">
-                                1. <i>T. KAARLELA, J.C. OUTEIRO, <b>A Cyber-Physical Machine Tool Concept for Education and Workforce Training in CNC Machining</b>, 53rd SME North American Manufacturing Research Conference (NAMRC 53), Clemson University. Greenville, SC, USA, June 23 - 27, 2025. Manufacturing Letters (accepted).</i>
-                            </p>
-                            <p style="font-size:14px">2. <i>J.C. OUTEIRO, T. KAARLELA, N. UÇAK, N. GREIS, H. CHERUKURI, <b>Development of a Digital Twin of an Intelligent Robot-Assisted Finishing System for Polishing Metal Additive Manufactured Components</b>, 8th International Conference on Integrity, Reliability and Failure of Engineering Systems and Materials (IRF2025), Porto, Portugal, 15-18 July, 2025.</i></p>
-                            <p align="justify"><b>2. Workforce development using IDTs.</b> IDTs can also provide personalized, on-demand, safe, immersive, engaging, and autonomous training. IDTs allows real-time, contextual guidance tailored to specific tasks and environments; continuous learning and adaptation; multimodal interaction through voice and visual communication; and immersive simulations for skill practice in safe, controlled settings. Below you can find some examples of IDTs for education and workforce training in manufacturing</p>
-                            </p>
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="400" height="400" src="images/IDT_3DPRINTING.mp4" title="Example of DT for training" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <p align="center" style="font-size:16px">
-                                <i>Example of a IDT for education and workforce training in Additive Manufacturing of ceramics<sup>3</sup></i>
-                            </p>
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="400" height="400" src="images/IDT_HAAS-CNC2.mp4" title="Example of DT for training" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <p align="center" style="font-size:16px">
-                                <i>Example of a IDT for education and workforce training in CNC Machining<sup>4</sup></i>
-                            </p>
-                            <div style="display: flex; justify-content: center;">
-                                <iframe width="400" height="400" src="images/IDT_GD&T.mp4" title="Example of DT for training" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <p align="center" style="font-size:16px">
-                                <i>Example of a IDT for education and workforce training in GD&T<sup>5</sup>.</i>
-                            </p>
-                            <p style="font-size:14px">
-                                3. <i>Project Title: <b>Immersive Training for Additive Manufacturing of Technical Ceramics using Mixed Reality</b>. Funding: CAMAC. Period: 2024.</i>
-                            </p>
-                            <p style="font-size:14px">4. <i>T. KAARLELA, J.C. OUTEIRO, A Cyber-Physical Machine Tool Concept for Education and Workforce Training in CNC Machining, 53rd SME North American Manufacturing Research Conference (NAMRC 53), Clemson University. Greenville, SC, USA, June 23 - 27, 2025. Manufacturing Letters</i></p>
-                            <p style="font-size:14px">
-                                5. <i>Project Title: <b>Workforce Training for Metrology using Immersive Technologies</b>. Funding: CPM Affiliates. Period: 2023-2024.</i>
-                            </p>
-
                         </div>
-                    </div>
-
-
-                    <div class="wp-block-getwid-advanced-spacer" style="height:75px" aria-hidden="true"></div>
-
-
-                    <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
-                        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:41%">
-                            <p></p>
-                        </div>
-                    </div>
-
-
-
-                    <p></p>
-
+                    </details>
                 </div><!-- /.page-body -->
-
-
-
-
-
             </div><!-- /.page -->
-
-
         </div><!-- /.container -->
-
     </section>
     <!-- /#main -->
     <!-- Include the Footer -->
